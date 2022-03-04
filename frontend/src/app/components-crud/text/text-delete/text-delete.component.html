@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Excluir Texto</mat-card-title>
+    <form>
+        <mat-form-field>
+           <input matInput placeholder="Titulo" [value]="text.title" name="title" disabled> 
+        </mat-form-field>
+        <textarea class="myTextArea" disabled cols="30" rows="10" placeholder=" Digite aqui o seu texto..." [value]="text.text" name="text"></textarea> 
+        <!-- <mat-form-field>
+            <textarea  matInput placeholder="Digite aqui o seu texto..."  
+            cdkAutosizeMinRows="10" >
+            </textarea>
+          </mat-form-field>  -->
+        
+    </form>
+    <button mat-raised-button  (click)="deleteText()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancelText()">
+        Cancelar
+    </button>
+</mat-card>
+
